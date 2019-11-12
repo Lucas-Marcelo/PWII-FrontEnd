@@ -7,6 +7,8 @@ import { ListaProjetosComponent } from './lista-projetos/lista-projetos.componen
 import { NovoProjetoComponent } from './novo-projeto/novo-projeto.component';
 import { DetalheProjetoComponent } from './detalhe-projeto/detalhe-projeto.component';
 import { EditarProjetoComponent } from './editar-projeto/editar-projeto.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { EditarProjetoComponent } from './editar-projeto/editar-projeto.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

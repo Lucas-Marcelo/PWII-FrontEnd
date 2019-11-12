@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
+import { ProjetoApiService } from '../service/projeto-api.service';
 
 @Component({
   selector: 'has-lista-projetos',
@@ -8,14 +9,15 @@ import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
   styleUrls: ['./lista-projetos.component.css']
 })
 export class ListaProjetosComponent implements OnInit {
-  projetos=
-  [
-    {"nome":"projeto1","sala":"l08","turma":"2Q"},
-    {"nome":"projeto2","sala":"l07","turma":"1Q"}
-  ];
-  constructor(private router: Router) { }
+  projetos : Projeto[];
+  
+  constructor(private router: Router,
+              private service: ProjetoApiService) { }
 
   ngOnInit() {
+    this.service.getProjetos()
+                .subscribe((dados : Projeto[]) => this.projetos = dados, 
+                            error => console.log(error));
   }
 
   detalhes(id:number)
