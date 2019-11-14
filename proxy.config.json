@@ -1,0 +1,10 @@
+{
+    "/proxy/*": {
+        "target": "http://marceloalves.somee.com",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": {
+        "^/proxy": "/api"
+        }
+    }
+}

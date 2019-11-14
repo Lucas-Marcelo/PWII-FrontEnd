@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
 import { ProjetoApiService } from '../service/projeto-api.service';
+import { Projeto } from '../model/projeto';
 
 @Component({
   selector: 'has-lista-projetos',

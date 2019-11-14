@@ -7,23 +7,13 @@
       <thead>
         <tr>
           <th>NOME</th>
-          <th>SALA</th>
-          <th>TURMA</th>
           <th>Ações</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let it of projetos">
           <td>
-            {{it.nome}}
-          </td>
-
-          <td>
-              {{it.sala}}
-          </td>
-
-          <td>
-              {{it.turma}}
+            {{it.Nome}}
           </td>
           
           <td><button class="btn btn-danger">Delete</button>
